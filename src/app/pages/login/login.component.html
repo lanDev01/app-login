@@ -1,0 +1,49 @@
+<div class="max-w-md w-full h-[635px] flex flex-col justify-center border border-green-400">
+  <h1 class="text-3xl font-medium">Sign in</h1>
+
+  <div class="mt-5">
+    <p>If you don't have an account register</p>
+    <p>You can <span class="text-primary font-bold">Register here !</span></p>
+  </div>
+
+  <form class="mt-14">
+    <div class="flex flex-col">
+      <div class="flex flex-col">
+        <label for="">E-mail</label>
+
+        <div class="flex items-center gap-2 border-b-2 border-black py-2">
+          <i-lucide [img]="MailIcon" class="size-4"></i-lucide>
+          <input type="email" class="bg-transparent outline-none w-full" placeholder="Enter your e-mail address"
+            required />
+        </div>
+      </div>
+
+      <div class="flex flex-col mt-12">
+        <label for="">Password</label>
+        <div class="flex items-center gap-2 border-b-2 border-black py-2">
+          <i-lucide [img]="LockIcon" class="size-4"></i-lucide>
+          <input type="password" class="bg-transparent outline-none w-full" placeholder="Enter your password"
+            required />
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between w-full mt-4">
+      <div class="flex items-center gap-1">
+        <input type="checkbox" class="size-3" name="remember" id="remember">
+        <label for="remember" class="text-sm font-light cursor-pointer text-zinc-700">Remember me</label>
+      </div>
+      <a href="#" class="text-sm font-light text-zinc-700">Forgot password</a>
+    </div>
+
+    <button class="bg-primary w-full rounded-[32px] text-zinc-50 py-4 mt-12">Login</button>
+  </form>
+
+  <p class="text-gray-400 font-medium text-center mt-10">or continue with</p>
+
+  <div class="w-full flex justify-center gap-5 mt-7">
+    <img [src]="facebook" [alt]="facebookAlt">
+    <img [src]="apple" [alt]="appleAlt">
+    <img [src]="google" [alt]="googleAlt">
+  </div>
+</div>
