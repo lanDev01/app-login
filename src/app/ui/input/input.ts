@@ -1,5 +1,5 @@
 import { Component, input, signal } from '@angular/core';
-import { LucideAngularModule, Eye, EyeOff } from 'lucide-angular';
+import { Eye, EyeOff, LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-input',
