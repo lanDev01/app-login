@@ -1,0 +1,29 @@
+<div class="flex flex-col gap-3">
+  <div class="flex justify-between">
+    <label [for]="text()" class="text-[#344054]">{{ text() }}</label>
+
+    @if (forgot()) {
+    <a class="text-blue-500 text-base cursor-pointer hover:underline">Forgot?</a>
+    }
+  </div>
+
+  <div class="relative">
+    <input [id]="text()" [type]="inputType" [placeholder]="placeholder()" [value]="inputValue()"
+      (input)="onInput($event)" [attr.autocomplete]="autocomplete" class="w-full text-[#101828] p-4 pr-12 rounded-lg border-2 border-gray-400
+           focus:border-transparent focus:outline-4 focus:outline-[#D1E9FF]
+           placeholder:text-gray-400 transition-all duration-300 ease-in-out" />
+
+    @if (type() === 'password' && inputValue()) {
+    <button type="button" (click)="togglePasswordVisibility()"
+      class="absolute inset-y-0 right-4 my-auto h-fit text-gray-400 hover:text-gray-500 rounded-full">
+      @if (!isPasswordVisible()) {
+      <lucide-angular [img]="eye" class="size-6" />
+      }
+      @if (isPasswordVisible()) {
+      <lucide-angular [img]="eyeOff" class="size-6" />
+      }
+    </button>
+    }
+
+  </div>
+</div>
